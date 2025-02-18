@@ -1,0 +1,55 @@
+.App {
+  text-align: center;
+  background-color: #fff5f8;
+  color: #4b0082;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Caveat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.App-header {
+  font-size: calc(15px + 2vmin);
+  color: black;
+}
+
+.message-box {
+  background-color: #ffccff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message-box p {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 20px;
+}
+
+.birthday-button {
+  background-color: #ff66b2;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.birthday-button:hover {
+  background-color: #ff3385;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 16px;
+  color: #6a1b9a;
+}
+
+footer p {
+  font-style: italic;
+}
