@@ -13,13 +13,20 @@ export const Cake = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const candles = Array.from({ length: 50 }, (_, index) => (
+  const candles = Array.from({ length: 10 }, (_, index) => (
     <div
       key={index}
       className={`candle ${candlesBlown ? "blown" : ""}`}
       style={{
         left: `${(index % 10) * 10}%`,
         bottom: `${Math.floor(index / 10) * 20}px`,
+        top: `${
+          index === 0
+            ? -500
+            : index < 5
+            ? ((10 - index) % 5) * 6 - 30
+            : (index % 5) * 6 - 30
+        }%`,
       }}
     >
       <div className="flame"></div>
@@ -32,6 +39,7 @@ export const Cake = () => {
         {candles}
         <div className="cake-base"></div>
       </div>
+      <p className="blow-text">Blow The Candles!</p>
     </div>
   );
 };

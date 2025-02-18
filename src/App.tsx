@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className="App">
-      {isCakeClicked ? (
+      {!isCakeClicked ? (
         <header className="App-header">
           <h1>🎉 50 & Fabulous! 🎉</h1>
           <p>Welcome to the ultimate 50th birthday celebration!</p>
@@ -48,7 +48,9 @@ function App() {
           </button>
 
           <footer className="footer">
-            <p>Don’t forget to have your birthday cake! 🎂</p>
+            <p onClick={() => setIsCakeClicked(true)}>
+              Don’t forget to have your birthday cake! 🎂
+            </p>
           </footer>
         </header>
       ) : (
