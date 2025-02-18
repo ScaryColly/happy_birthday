@@ -1,0 +1,63 @@
+/* BirthdayCake.css */
+
+.cake-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+  
+  .cake {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #ffcc99;
+    border-radius: 50% 50% 0 0;
+    overflow: hidden;
+  }
+  
+  .cake-base {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #996633;
+    border-radius: 0 0 50% 50%;
+  }
+  
+  .candle {
+    position: absolute;
+    width: 4px;
+    height: 20px;
+    background-color: #ff6347;
+    border-radius: 2px;
+    transition: all 1s ease;
+  }
+  
+  .candle .flame {
+    position: absolute;
+    top: -6px;
+    width: 6px;
+    height: 6px;
+    background-color: yellow;
+    border-radius: 50%;
+    transition: all 1s ease;
+  }
+  
+  .candle.blown .flame {
+    background-color: transparent;
+    transform: scale(0);
+  }
+  
+  @media (max-width: 600px) {
+    .cake {
+      width: 200px;
+      height: 150px;
+    }
+    .cake-base {
+      height: 20px;
+    }
+  }
+  

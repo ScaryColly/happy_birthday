@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "./App.css";
+import { Cake } from "./components/cake/Cake";
 
 function App() {
   const [counter, setCounter] = useState(0);
+  const [isCakeClicked, setIsCakeClicked] = useState(false);
 
   const handleButtonClick = () => {
     setCounter(counter + 1);
@@ -31,25 +33,27 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>🎉 50 & Fabulous! 🎉</h1>
-        <p>Welcome to the ultimate 60th birthday celebration!</p>
+      {isCakeClicked ? (
+        <header className="App-header">
+          <h1>🎉 50 & Fabulous! 🎉</h1>
+          <p>Welcome to the ultimate 50th birthday celebration!</p>
 
-        <div className="message-box">
-          <h2>Here's your birthday message:</h2>
-          <p>{messages[counter % messages.length]}</p>
-        </div>
+          <div className="message-box">
+            <h2>Here's your birthday message:</h2>
+            <p>{messages[counter % messages.length]}</p>
+          </div>
 
-        <button onClick={handleButtonClick} className="birthday-button">
-          Get Another Birthday Message 🎈
-        </button>
+          <button onClick={handleButtonClick} className="birthday-button">
+            Get Another Birthday Message 🎈
+          </button>
 
-        <footer className="footer">
-          <a href="https://sue-bd-cake.netlify.app/">
-            Don’t forget to have your birthday cake! 🎂
-          </a>
-        </footer>
-      </header>
+          <footer className="footer">
+            <p>Don’t forget to have your birthday cake! 🎂</p>
+          </footer>
+        </header>
+      ) : (
+        <Cake />
+      )}
     </div>
   );
 }
